@@ -1,0 +1,207 @@
+.css-border-right { border-right: 1px solid #d8d2cf;}
+.css-border-left{ border-left:1px solid #d8d2cf;}
+.css-border-top{ border-top:1px solid #d8d2cf;}
+.css-border-bottom { border-bottom:1px solid #d8d2cf;}
+.css-noPadding{ padding:0!important;}
+.css-noMargin{ margin:0!important;}
+.css-noFloat{ float:none!important;}
+.css-noBackground { background-color: transparent!important;}
+.css-bold { font-weight: bold!important;}
+.css-no-bold { font-weight: normal!important;}
+.css-center { text-align:center!important;}
+.css-justify{ text-align:justify!important;}
+.css-left { text-align:left!important;}
+.css-right { text-align:right!important;}
+.css-underline { text-decoration: underline!important;}
+.css-line-through { text-decoration:line-through!important;}
+.css-relative{ position:relative;}
+.css-inline{ display:inline!important;}
+.css-middle { vertical-align:middle;}
+.css-hr{ height:1px; background-color:#777; border:0 solid #777; margin:-10px 0 15px 0 }
+.css-hr-fff{ height:1px; background-color:#FFF; border:0 solid #FFF; margin:-10px 0 15px 0 ;     opacity: 0.5;}
+.css-hide{ display:none;}
+.css-shadow { -webkit-box-shadow: -5px 6px 5px -4px rgba(0,0,0,0.75); -moz-box-shadow: -5px 6px 5px -4px rgba(0,0,0,0.75); box-shadow: -5px 6px 5px -4px rgba(0,0,0,0.75);}
+.css-uppercase{ text-transform: uppercase;}
+.css-italic { font-style: italic;}
+.css-w100 { width: 100%!important; }
+.btn-flat { border-radius: 0px;}
+.css-left{ float:left !important;}
+.css-right{ float:right !important}
+.css-show { display: block!important; }
+.css-clearfix { clear: both;}
+.css-100w { width: 100%; }
+
+.css-news hr{
+    border-top: 1px solid #e1e1e1 !important;
+}
+
+.imgNews{ width:auto; max-height:340px; overflow:hidden;}
+
+.css-maxImage350{ max-width:350px;}
+
+.css-marginR10{ margin-right:10px!important}
+.css-marginR20{ margin-right:20px!important}
+.css-marginR30{ margin-right:30px!important}
+.css-marginR40{ margin-right:40px!important}
+.css-marginR50{ margin-right:50px!important}
+
+.css-marginL10{ margin-left:10px!important}
+.css-marginL20{ margin-left:20px!important}
+.css-marginL30{ margin-left:30px!important}
+.css-marginL40{ margin-left:40px!important}
+.css-marginL50{ margin-left:50px!important}
+.css-marginL60{ margin-left:60px!important}
+.css-marginL70{ margin-left:70px!important}
+.css-marginL80{ margin-left:80px!important}
+.css-marginL90{ margin-left:90px!important}
+.css-marginL100{ margin-left:100px!important}
+
+.css-marginT0{ margin-top:0px!important}
+.css-marginT5{ margin-top:5px!important}
+.css-marginT10{ margin-top:10px!important}
+.css-marginT16{ margin-top:16px!important}
+.css-marginT20{ margin-top:20px!important}
+.css-marginT24{ margin-top:24px!important}
+.css-marginT28{ margin-top:28px!important}
+.css-marginT30{ margin-top:30px!important}
+.css-marginT40{ margin-top:40px!important}
+.css-marginT45{ margin-top:45px!important}
+.css-marginT50{ margin-top:50px!important}
+.css-marginT55{ margin-top:55px!important}
+.css-marginT60{ margin-top:60px!important}
+.css-marginT70{ margin-top:70px!important}
+.css-marginT72{ margin-top:72px!important}
+.css-marginT79{ margin-top:79px!important}
+.css-marginT80{ margin-top:80px!important}
+.css-marginT90{ margin-top:90px!important}
+.css-marginT100{ margin-top:100px!important}
+
+.css-marginB0{ margin-bottom:0px!important}
+.css-marginB10{ margin-bottom:10px!important}
+.css-marginB20{ margin-bottom:20px!important}
+.css-marginB30{ margin-bottom:30px!important}
+.css-marginB40{ margin-bottom:40px!important}
+.css-marginB50{ margin-bottom:50px!important}
+.css-marginB55{ margin-bottom:55px!important}
+.css-marginB60{ margin-bottom:60px!important}
+.css-marginB80{ margin-bottom:80px!important}
+.css-marginB100{ margin-bottom:100px!important}
+
+.css-margin0{ margin:0 !important;}
+
+.css-paddingR0{ padding-right:0px!important}
+.css-paddingR10{ padding-right:10px!important}
+.css-paddingR15{ padding-right:15px!important}
+.css-paddingR20{ padding-right:20px!important}
+.css-paddingR30{ padding-right:30px!important}
+.css-paddingR40{ padding-right:40px!important}
+.css-paddingR45{ padding-right:45px!important}
+.css-paddingR50{ padding-right:50px!important}
+
+.css-paddingL0{ padding-left:0px!important}
+.css-paddingL10{ padding-left:10px!important}
+.css-paddingL15{ padding-left:15px!important}
+.css-paddingL20{ padding-left:20px!important}
+.css-paddingL30{ padding-left:30px!important}
+.css-paddingL40{ padding-left:40px!important}
+.css-paddingL45{ padding-left:45px!important}
+.css-paddingL50{ padding-left:50px!important}
+.css-paddingL70{ padding-left:70px!important}
+
+.css-paddingT0{ padding-top:0!important}
+.css-paddingT5{ padding-top:5px!important}
+.css-paddingT10{ padding-top:10px!important}
+.css-paddingT12{ padding-top:12px!important}
+.css-paddingT14{ padding-top:14px!important}
+.css-paddingT20{ padding-top:20px!important}
+.css-paddingT30{ padding-top:30px!important}
+.css-paddingT40{ padding-top:40px!important}
+.css-paddingT50{ padding-top:50px!important}
+.css-paddingT60{ padding-top:60px!important}
+.css-paddingT70{ padding-top:70px!important}
+.css-paddingT80{ padding-top:80px!important}
+.css-paddingT90{ padding-top:90px!important}
+.css-paddingT100{ padding-top:100px!important}
+
+.css-paddingB0{ padding-bottom:0px!important}
+.css-paddingB10{ padding-bottom:10px!important}
+.css-paddingB20{ padding-bottom:20px!important}
+.css-paddingB25{ padding-bottom:25px!important}
+.css-paddingB30{ padding-bottom:30px!important}
+.css-paddingB40{ padding-bottom:40px!important}
+.css-paddingB50{ padding-bottom:50px!important}
+.css-paddingB90{ padding-bottom:90px!important}
+.css-paddingB300{ padding-bottom:300px!important}
+
+.css-padding0{ padding:0px !important;}
+.css-padding30{ padding:30px !important;}
+
+.css-fontSize10{ font-size:10px!important;}
+.css-fontSize11{ font-size:11px!important;}
+.css-fontSize12{ font-size:12px!important;}
+.css-fontSize13{ font-size:13px!important;}
+.css-fontSize14{ font-size:14px!important;}
+.css-fontSize15{ font-size:15px!important;}
+.css-fontSize16{ font-size:16px!important;}
+.css-fontSize17{ font-size:17px!important;}
+.css-fontSize18{ font-size:18px!important;}
+.css-fontSize19{ font-size:19px!important;}
+.css-fontSize20{ font-size:20px!important;}
+.css-fontSize21{ font-size:21px!important;}
+.css-fontSize22{ font-size:22px!important;}
+.css-fontSize23{ font-size:23px!important;}
+.css-fontSize24{ font-size:24px!important;}
+.css-fontSize25{ font-size:25px!important;}
+.css-fontSize26{ font-size:26px!important;}
+.css-fontSize27{ font-size:27px!important;}
+.css-fontSize28{ font-size:28px!important;}
+.css-fontSize29{ font-size:29px!important;}
+.css-fontSize30{ font-size:30px!important;}
+.css-fontSize31{ font-size:31px!important;}
+.css-fontSize32{ font-size:32px!important;}
+.css-fontSize33{ font-size:33px!important;}
+.css-fontSize34{ font-size:34px!important;}
+.css-fontSize35{ font-size:35px!important;}
+.css-fontSize36{ font-size:36px!important;}
+.css-fontSize37{ font-size:37px!important;}
+.css-fontSize38{ font-size:38px!important;}
+.css-fontSize39{ font-size:39px!important;}
+.css-fontSize40{ font-size:40px!important;}
+
+.css-fontSize41{ font-size:41px!important;}
+.css-fontSize42{ font-size:42px!important;}
+.css-fontSize43{ font-size:43px!important;}
+.css-fontSize44{ font-size:44px!important;}
+.css-fontSize45{ font-size:45px!important;}
+.css-fontSize46{ font-size:46px!important;}
+.css-fontSize47{ font-size:47px!important;}
+.css-fontSize48{ font-size:48px!important;}
+.css-fontSize49{ font-size:49px!important;}
+.css-fontSize50{ font-size:50px!important;}
+.css-fontSize120{ font-size:120px!important;}
+
+.css-espacio10{ margin-bottom:10px;}
+.css-espacio20{ margin-bottom:20px;}
+.css-espacio30{ margin-bottom:30px;}
+.css-espacio40{ margin-bottom:40px;}
+.css-espacio50{ margin-bottom:50px;}
+.css-espacio60{ margin-bottom:60px;}
+.css-espacio70{ margin-bottom:70px;}
+.css-espacio80{ margin-bottom:80px;}
+.css-espacio90{ margin-bottom:90px;}
+.css-espacio100{ margin-bottom:100px;}
+.css-espacio230{ margin-bottom:230px;}
+
+.css-minHeight10{ min-height:10px;}
+.css-minHeight20{ min-height:20px;}
+.css-minHeight30{ min-height:30px;}
+.css-minHeight40{ min-height:40px;}
+.css-minHeight50{ min-height:50px;}
+.css-minHeight60{ min-height:60px;}
+.css-minHeight70{ min-height:70px;}
+.css-minHeight80{ min-height:80px;}
+.css-minHeight90{ min-height:90px;}
+.css-minHeight100{ min-height:100px;}
+
+.css-text-white { color: #FFF!important;}
+.css-text-black { color: #000!important;}

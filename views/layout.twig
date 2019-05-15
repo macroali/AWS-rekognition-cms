@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <base href="{{ base }}">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <title> {% block title %}{% endblock %} | Gestor Web
+        </title>
+        {% block stylesheets %}
+            <!-- Bootstrap 3.3.7 -->
+            <link rel="stylesheet" href="/asset_public/bower_components/bootstrap/dist/css/bootstrap.min.css">
+            <!-- Font Awesome -->
+            <link rel="stylesheet" href="/asset_public/bower_components/components-font-awesome/css/fontawesome-all.min.css">
+            <!-- Ionicons -->
+            <link rel="stylesheet" href="/asset_public/bower_components/Ionicons/css/ionicons.min.css">
+            <!-- Theme style -->
+            <link rel="stylesheet" href="/asset_public/stylesheets/AdminLTE.css">
+            <!-- Skins -->
+            <link rel="stylesheet" href="/asset_public/stylesheets/skins/skin-black.css">
+            <!-- main CSS -->
+            <link rel="stylesheet" href="/asset_public/stylesheets/css-styles.css">
+        {% endblock %}
+    </head>
+
+        <body class="hold-transition skin-black sidebar-mini fixed">
+        <div class="wrapper">
+            {% include 'overall/navbar.twig' %}
+            <div class="content-wrapper">
+                <section class="content-header">
+                    {% block breadcrumb %}{% endblock %}
+                </section>
+
+                <section class="content container-fluid">
+                    {% block body %}{% endblock %}
+                </section>
+            </div>
+        </div>
+    </body>
+    {% block javascripts %}
+        <!-- jQuery 3 -->
+        <script src="/asset_public/bower_components/jquery/dist/jquery.min.js"></script>
+        <!-- jQuery UI 1.11.4 -->
+        <script src="/asset_public/bower_components/jquery-ui/jquery-ui.min.js"></script>
+        <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+        <script>
+            $.widget.bridge('uibutton', $.ui.button);
+        </script>
+        <!-- Bootstrap 3.3.7 -->
+        <script src="/asset_public/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- Slimscroll -->
+        <script src="/asset_public/bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="/asset_public/bower_components/fastclick/lib/fastclick.js"></script>
+        <!-- AdminLTE App -->
+        <script src="/asset_public/javascripts/adminlte.min.js"></script>
+        <!-- General methods -->
+        <script src="/asset_public/javascripts/generals-functions.js"></script>
+        <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+        <!-- <script src="/asset_public/javascripts/pages/dashboard.js"></script> -->
+        <!-- AdminLTE for demo purposes -->
+        <script src="/asset_public/javascripts/demo.js"></script>
+    {% endblock %}
+</html>

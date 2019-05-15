@@ -1,0 +1,78 @@
+{% extends 'layout.twig' %}
+{% block title %} {{ title }} {% endblock %}
+
+
+{% block breadcrumb %}
+    <h1>
+        Empleados
+        <small>Listado de empleados</small>
+    </h1>
+    <ol class="breadcrumb">
+        <li>
+            <a href="/">
+                <i class="fas fa-tachometer-alt"></i>
+                Dashboard
+            </a>
+        </li>
+        <li class="active">Empleados</li>
+    </ol>
+{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="box box-warning">
+                <div class="box-header">
+                    <h2 class="box-title">Listado de Empleados</h2>
+                </div>
+
+                <div class="box-body">
+                    <table class="table table-bordered table-striped">
+                        <thead>
+                            <tr>
+                                <th>Ref.</th>
+                                <th>Nombres</th>
+                                <!-- <th>E-mail</th> -->
+                                <th>Cargo</th>
+                                <th>Teléfono</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for employee in employees %}
+                                <tr>
+                                    <td>{{ employee.id }}</td>
+                                    <td>{{ employee.u_name ~ ' ' ~ employee.last_name }}</td>
+                                    <!-- <td>{{ employee.email }}</td> -->
+                                    <td>{{ employee.work_position }}</td>
+                                    <td>{{ employee.mobile }}</td>
+                                    <td>
+                                        <a href="employees/edit/{{ employee.id}}" class="btn btn-flat btn-info">Ver</a>
+                                        <a href="#" class="btn btn-danger btn-flat">Eliminar</a>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+<!-- CSS -->
+{% block stylesheets %}
+{{ parent() }}
+<!-- DataTables -->
+<link rel="stylesheet" href="/asset_public/bower_components/datatables.net-bs/css/dataTables.bootstrap.min.css">
+{% endblock %}
+
+<!-- JS -->
+{% block javascripts %}
+{{ parent() }}
+<!-- DataTables -->
+<script src="/asset_public/bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="/asset_public/bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<!-- Custom JS -->
+<script src="/asset_public/javascripts/js-employees-list.js"></script>
+{% endblock %}
