@@ -23,7 +23,8 @@
     </ol>
 {% endblock %}
 {% block body %}
-    <form name="frm-edit" id="frm-edit" method="post" enctype=multipart/form-data action="">
+    <div class="js-alert"></div>
+    <form name="frm-edit" id="frm-edit" method="post" enctype="multipart/form-data" action="">
         <div class="row css-marginB20">
             <div class="col-md-8">
                 <div class="box box-warning">
@@ -90,7 +91,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Fecha de nacimiento:</label>
-                                    <input type="text" class="form-control" name="birthdate" id="birthdate" data-inputmask="'alias': 'dd-mm-yyyy'" data-mask value="{{ employee.formed_birthdate }}">
+                                    <input type="text" class="form-control" name="birthdate" id="birthdate" data-inputmask="'alias': 'dd-mm-yyyy'" data-mask="data-mask" value="{{ employee.formed_birthdate }}">
                                     <div class="text-danger" id="birthdate_validate"></div>
                                 </div>
                                 <div class="form-group">
@@ -126,21 +127,58 @@
                 <h2 class="box-title">Imágenes de galería</h2>
             </div>
             <div class="box-body">
+                <label>Previsualizar</label>
                 <div class="col-md-10 css-noFloat center-block text-center well">
-                    <div class="btn btn-default btn-file css-width100 btn-file-gallery">
-                        <i class="fa fa-camera"></i>
-                        <span>Agregar imágenes</span>
-                        <input type="file" name="gallery_images[]" id="gallery_images" class="gallery_images" multiple="multiple">
-                    </div>
-                    <p></p>
-                    <div class="text-danger" id="cover_image_validate"></div>
+                    <div class="row css-marginT40" id="ajx-gallery"></div>
                 </div>
-                <div class="row css-marginT40" id="ajx-gallery"></div>
+                <div class="btn btn-default btn-file css-width100 btn-file-gallery">
+                    <i class="fa fa-camera"></i>
+                    <span>Agregar imágenes</span>
+                    <input type="file" name="gallery_images[]" id="gallery_images" class="gallery_images" multiple="multiple">
+                </div>
+                <p></p>
+                <div class="text-danger" id="cover_image_validate"></div>
+                <label>Imagenes de Usuario</label>
+                <div class="well gallery">
+                    {% for image in employee.images %}
+                        <div class="col-md-3 css-marginT20">
+                            <div class="css-thumb" style="background-image: url('{{ bucket_prefix ~ "/" ~ image }}')"></div>
+
+                            <button type="button" class="btn btn-info btn-flat btn-block show-image" data-uri="{{ bucket_prefix ~ "/" ~ image }}">Ver
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+
+                            <button type="button" class="btn btn-danger btn-flat btn-block remove-image" data-image="{{ image }}">Eliminar
+                                <i class="far fa-trash-alt"></i>
+                            </button>
+                        </div>
+                    {% endfor %}
+                    <div class="clearfix css-marginB10"></div>
+                </div>
             </div>
         </div>
-
         <button type="submit" class="btn btn-success btn-flat btn-submit">Guardar</button>
     </form>
+
+    <div id="key" data-id="{{ employee.id }}"></div>
+
+    <!-- Modal -->
+    <div class="modal fade" tabindex="-1" role="dialog" id="mod-show">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Imagen</h4>
+                </div>
+                <div class="modal-body mod-image"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.modal -->
 {% endblock %}
 <!-- CSS -->
 {% block stylesheets %}

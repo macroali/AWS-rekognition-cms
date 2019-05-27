@@ -205,3 +205,16 @@
 
 .css-text-white { color: #FFF!important;}
 .css-text-black { color: #000!important;}
+
+.css-preview {
+    width: 100%;
+    height: auto;
+}
+
+.css-thumb {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 200px;
+}

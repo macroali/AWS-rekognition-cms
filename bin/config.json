@@ -1,7 +1,7 @@
 {
     "cognito": {
         "userPoolId": "us-west-2_qMvVExWxp",
-        "clientId": "7bni9kc2c57t8k19ao9ovjerm7"
+        "clientId": "8vi5qrmhdhpi204l16fq5lnph"
     },
     "paths": {
         "API": "https://jy90k5wg5d.execute-api.us-east-2.amazonaws.com/Developer"

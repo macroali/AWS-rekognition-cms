@@ -3,6 +3,7 @@ const parameters = JSON.parse(fs.readFileSync('./bin/parameters.json'));
 const config = JSON.parse(fs.readFileSync('./bin/config.json'));
 const request = require('request');
 const moment = require('moment');
+var bucket_prefix = "https://s3.us-east-2.amazonaws.com/dev.lambdas.bucket.com/employees/employee_<ID>/gallery";
 
 var employeesController = {};
 
@@ -35,10 +36,11 @@ employeesController.edit = (req, res) => {
         data.male = (data.gender == "M") ? "checked" : "";
         data.female = (data.gender == "F") ? "checked" : "";
         data.formed_birthdate = moment(new Date(data.birthday), "YYYY-MM-DD").format("DD-MM-YYYY");
-        
+
         res.render('employees/edit', {
-            title: 'Editar empleado:',
+            title: 'Editar empleado: ' + data.u_name + " " + data.last_name,
             base: parameters.base_url,
+            bucket_prefix: bucket_prefix.replace("<ID>", employee_id),
             employee: data
         });
     });
