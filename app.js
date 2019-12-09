@@ -7,16 +7,12 @@ var logger = require('morgan');
 var expressSession = require('express-session');
 var expressValidator = require('express-validator');
 var bodyParser = require('body-parser');
+const cors = require('cors')
 const AmazonCognitoIdentity = require('amazon-cognito-identity-js');
 const fs = require('fs');
-
-
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var employeesRouter = require('./routes/employees');
-const config = JSON.parse(fs.readFileSync('./bin/config.json')); // require('./bin/config.json');
-
 var app = express();
+
+const config = JSON.parse(fs.readFileSync('./bin/config.json')); // require('./bin/config.json');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -36,17 +32,21 @@ const ClientId = config.cognito.clientId;
 const userPool = new AmazonCognitoIdentity.CognitoUserPool({ UserPoolId, ClientId })
 
 // Session
-const session = {
-    secret: 'keyboard cat',
-    resave: false,
-    saveUninitialized: true,
-}
-if (process.env.PORT) {
-    session.cookie = { secure: true };
-}
-app.use(expressSession(session));
+app.use(expressSession({
+  secret: 'work hard',
+  resave: false,
+  saveUninitialized: true,
+  cookie: {
+    secure: (process.env.PORT) ? true : false,
+    maxAge: 1000 * 60 * 60 * 24 * 7
+  }
+}));
 
 // Routes
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
+var employeesRouter = require('./routes/employees');
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/employees', employeesRouter);

@@ -32,7 +32,11 @@
             <div class="login-box-body">
                 <p class="login-box-msg">Iniciar Sesión</p>
 
-                <div class="js-alert"></div>
+                <div class="js-alert">
+                {% if (alertMessage) %}
+                    <div class="alert alt-alert alert-danger" role="alert"> {{ alertMessage }} <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>
+                {% endif %}
+                </div>
 
                 <form name="frm-login" id="frm-login" method="post" action="">
                     <div class="form-group has-feedback">

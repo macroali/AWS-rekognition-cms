@@ -14,6 +14,9 @@ var employeesController = {};
  * @return {view}
  */
 employeesController.list = (req, res) => {
+    if (!req.session.sub) {
+        return res.redirect('/denied');
+    }
 
     request.get(config.paths.API + '/employees', (err, response, body) => {
         if (err) { return console.log('Erro: ' + err); }
@@ -27,6 +30,10 @@ employeesController.list = (req, res) => {
 };
 
 employeesController.edit = (req, res) => {
+    if (!req.session.sub) {
+        return res.redirect('/denied');
+    }
+    
     var employee_id = req.params.id;
 
     request.get(config.paths.API + '/employee?id=' + employee_id, (err, response, body) => {
