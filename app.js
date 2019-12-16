@@ -33,7 +33,7 @@ const userPool = new AmazonCognitoIdentity.CognitoUserPool({ UserPoolId, ClientI
 
 // Session
 app.use(expressSession({
-  secret: 'work hard',
+  secret: '04b1bc124dcf6b4ecb058f6ac6fada5618890ed0',
   resave: false,
   saveUninitialized: true,
   cookie: {
